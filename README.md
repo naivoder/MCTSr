@@ -1,6 +1,8 @@
 # Monte Carlo Tree Search with Self-Refine
 
-This repository contains an implementation of Monte Carlo Tree Search (MCTS) with self-refinement, using a locally hosted LLaMA instance for generating answers. This implementation specifically focuses on handling `gsm8k` and `MATH` datasets using the Hugging Face `datasets` library.
+This repository contains an implementation of [Monte Carlo Tree Search (MCTS) with self-refinement](https://arxiv.org/pdf/2406.07394), using a locally hosted LLaMA instance for generating answers. This implementation specifically focuses on handling `gsm8k` and `MATH` datasets using the Hugging Face `datasets` library.
+
+❗Note: This repository is *very* much based on [Trotsky1997's implementation](https://github.com/trotsky1997/MathBlackBox), which is (presumably) much better tested than mine. If you're looking for working code I recommend using theirs, but if you're looking to learn more by getting your hands dirty, I would love to collaborate!
 
 ## Installation
 
@@ -14,9 +16,11 @@ This repository contains an implementation of Monte Carlo Tree Search (MCTS) wit
 2. **Set up a virtual environment and activate it:**
 
     ```sh
-    python -m venv env
-    source env/bin/activate  # On Windows use `env\Scripts\activate`
+    conda create -n mctsr python=3.11     # Use conda like a sane person
+    python -m venv env                    # Otherwise use venv
+    source env/bin/activate               # On Windows use `env\Scripts\activate`
     ```
+    Please use conda. Why does anyone use venv anymore?? 
 
 3. **Install the required dependencies:**
 
